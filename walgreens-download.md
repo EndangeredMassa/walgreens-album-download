@@ -5,9 +5,10 @@
 all=[]; document.querySelectorAll('.assetImg').forEach(i => all.push(i.src)); all.join('\n');
 ```
 
-TO DO: replace `?height=200` with `?height=960`.
 
 ```sh
+sed -i 's/height=200/height=96/g' urls.txt
+
 wget -i urls.txt --content-disposition 
 ```
 
